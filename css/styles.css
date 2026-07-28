@@ -1265,3 +1265,41 @@ img {
     50% { transform: scale(1.1) rotate(180deg); opacity: 1; }
     100% { transform: scale(1) rotate(360deg); opacity: 0.8; }
 }
+
+/* ==========================================================================
+   Responsive Media Queries
+   ========================================================================== */
+
+@media (max-width: 991px) {
+    /* Navigation */
+    .nav-links { display: none; }
+    .mobile-menu-btn { display: block; }
+    
+    /* Grids & Layouts */
+    .waste-grid, .services-grid, .features-grid, .stats-grid, .process-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .zigzag-container, .contact-container, .about-container, .solution-container {
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Make zigzag-reverse stack correctly on mobile */
+    .zigzag-reverse .zigzag-container {
+        flex-direction: column !important;
+    }
+
+    /* Typography & Spacing */
+    .hero-title, h1 { font-size: 2.5rem !important; }
+    .section-title, h2 { font-size: 2rem !important; }
+    .section { padding: 4rem 0; }
+    .hero { padding: 8rem 1rem 3rem; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .container { padding: 0 1.5rem; }
+    .hero-title, h1 { font-size: 2rem !important; }
+    .section-title, h2 { font-size: 1.75rem !important; }
+}
