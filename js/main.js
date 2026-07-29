@@ -113,6 +113,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+    // 5. Hero Slider Logic
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+        
+        const initSlides = () => {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev');
+                if (indicators[index]) indicators[index].classList.remove('active');
+                
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                    if (indicators[index]) indicators[index].classList.add('active');
+                } else if (index === (currentSlide === 0 ? slides.length - 1 : currentSlide - 1)) {
+                    slide.classList.add('prev');
+                }
+            });
+        };
+        
+        initSlides();
+
+        const goToNextSlide = () => {
+            const prevSlide = document.querySelector('.hero-slide.prev');
+            if (prevSlide) prevSlide.classList.remove('prev');
+            
+            slides[currentSlide].classList.remove('active');
+            slides[currentSlide].classList.add('prev');
+            if (indicators[currentSlide]) indicators[currentSlide].classList.remove('active');
+            
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+            if (indicators[currentSlide]) indicators[currentSlide].classList.add('active');
+        };
+
+        const goToSlide = (index) => {
+            if (index === currentSlide) return;
+            
+            const prevSlide = document.querySelector('.hero-slide.prev');
+            if (prevSlide) prevSlide.classList.remove('prev');
+            
+            slides[currentSlide].classList.remove('active');
+            slides[currentSlide].classList.add('prev');
+            if (indicators[currentSlide]) indicators[currentSlide].classList.remove('active');
+            
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            if (indicators[currentSlide]) indicators[currentSlide].classList.add('active');
+            
+            resetInterval();
+        };
+
+        const startInterval = () => {
+            slideInterval = setInterval(goToNextSlide, 8000); // Increased time from 5000ms to 8000ms
+        };
+
+        const resetInterval = () => {
+            clearInterval(slideInterval);
+            startInterval();
+        };
+
+        startInterval();
+        
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+    }
+
 // Preloader Logic
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');

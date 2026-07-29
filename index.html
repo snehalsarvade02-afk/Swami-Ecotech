@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=3">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
@@ -89,16 +89,48 @@
         <a href="contact.html" class="btn-primary mobile-link">Contact Us</a>
     </div>
 
-    <!-- Stunning Full Screen Hero Section -->
-    <section class="hero-massive">
-        <div class="container" style="position: relative; z-index: 10;">
-            <div class="badge" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 2rem;">Pioneering India's Circular Economy</div>
-            <h1 class="hero-title">Transforming E-Waste into <br><span style="color: var(--primary);">Eco-Wealth</span></h1>
-            <p class="hero-description">We provide comprehensive, secure, and environmentally responsible IT asset disposal and data destruction solutions for modern enterprises.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Schedule a Pickup <i class="ph ph-arrow-right"></i></a>
-                <a href="solutions.html" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem; background: white; color: var(--bg-dark);">Explore Corporate Solutions</a>
+    <!-- Stunning Full Screen Hero Slider Section -->
+    <section class="hero-slider-container">
+        
+        <div class="hero-slide active" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/images/hero.png');">
+            <div class="container hero-slide-content">
+                <div class="badge hero-badge">Pioneering India's Circular Economy</div>
+                <h1 class="hero-title">Transforming E-Waste into <br><span style="color: var(--primary);">Eco-Wealth</span></h1>
+                <p class="hero-description">We provide comprehensive, secure, and environmentally responsible IT asset disposal and data destruction solutions for modern enterprises.</p>
+                <div class="hero-buttons-flex">
+                    <a href="contact.html" class="btn-primary hero-btn">Schedule a Pickup <i class="ph ph-arrow-right"></i></a>
+                    <a href="solutions.html" class="btn-primary hero-btn-alt">Explore Corporate Solutions</a>
+                </div>
             </div>
+        </div>
+        
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/images/hero2.png');">
+            <div class="container hero-slide-content">
+                <div class="badge hero-badge">Zero Landfill Guarantee</div>
+                <h1 class="hero-title">Advanced Recycling for a <br><span style="color: var(--primary);">Sustainable Future</span></h1>
+                <p class="hero-description">We recover precious resources with state-of-the-art robotic sorting, maximizing your ROI while protecting the planet.</p>
+                <div class="hero-buttons-flex">
+                    <a href="process.html" class="btn-primary hero-btn">See Our Process <i class="ph ph-arrow-right"></i></a>
+                    <a href="contact.html" class="btn-primary hero-btn-alt">Request Audit</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('assets/images/hero3.png');">
+            <div class="container hero-slide-content">
+                <div class="badge hero-badge">100% Certified Destruction</div>
+                <h1 class="hero-title">Military-Grade <br><span style="color: var(--primary);">Data Security</span></h1>
+                <p class="hero-description">Your data security is our highest priority. We use internationally certified logical wiping and physical shredders.</p>
+                <div class="hero-buttons-flex">
+                    <a href="solution-sanitization.html" class="btn-primary hero-btn">View Security Solutions <i class="ph ph-arrow-right"></i></a>
+                    <a href="contact.html" class="btn-primary hero-btn-alt">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-indicators">
+            <button class="indicator active" data-slide="0">1</button>
+            <button class="indicator" data-slide="1">2</button>
+            <button class="indicator" data-slide="2">3</button>
         </div>
     </section>
 
@@ -160,8 +192,10 @@
     <section class="section" style="padding-top: 6rem;">
         <div class="container">
             <div class="section-header text-center">
-                <div class="badge" style="margin: 0 auto 1rem;">Comprehensive Processing</div>
-                <h2 class="section-title">What We Recycle</h2>
+                <div style="display: inline-flex; flex-direction: column; align-items: flex-start;">
+                    <div class="badge" style="margin: 0 0 0.25rem 0;">Comprehensive Processing</div>
+                    <h2 class="section-title" style="margin-top: 0;">What We Recycle</h2>
+                </div>
                 <p class="section-subtitle">We manage and recover materials from every major category of electronic and electrical waste.</p>
             </div>
             
@@ -287,7 +321,7 @@
             <p>&copy; 2026 Swami Ecotech. All rights reserved.</p>
         </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=2"></script>
 </body>
 </html>
 
