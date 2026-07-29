@@ -183,6 +183,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 goToSlide(index);
             });
         });
+
+        const prevArrow = document.querySelector('.prev-arrow');
+        const nextArrow = document.querySelector('.next-arrow');
+
+        if (prevArrow) {
+            prevArrow.addEventListener('click', () => {
+                const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                goToSlide(prevIndex);
+            });
+        }
+
+        if (nextArrow) {
+            nextArrow.addEventListener('click', () => {
+                goToNextSlide();
+                resetInterval();
+            });
+        }
     }
 
 // Preloader Logic

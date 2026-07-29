@@ -1428,6 +1428,39 @@ img {
     margin-bottom: 2rem;
 }
 
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid transparent;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-arrow {
+    left: 40px;
+}
+
+.next-arrow {
+    right: 40px;
+}
+
 .hero-indicators {
     position: absolute;
     bottom: 40px;
