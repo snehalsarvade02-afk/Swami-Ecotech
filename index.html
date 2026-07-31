@@ -136,21 +136,33 @@
         </div>
     </section>
 
-    <!-- Trust Badges Section -->
-    <div class="trust-banner">
-        <div class="container trust-flex">
-            <div class="trust-badge">
-                <i class="ph-duotone ph-certificate"></i> ISO 9001 Certified
-            </div>
-            <div class="trust-badge">
-                <i class="ph-duotone ph-building"></i> CPCB Authorized
-            </div>
-            <div class="trust-badge">
-                <i class="ph-duotone ph-tree"></i> ISO 14001 Environmental
-            </div>
-            <div class="trust-badge">
-                <i class="ph-duotone ph-shield-check"></i> Data Security Grade
-            </div>
+    <!-- Animated Marquee matching screenshot -->
+    <div style="background: var(--primary); padding: 12px 0; overflow: hidden; width: 100%;">
+        <div style="display: flex; gap: 3rem; width: max-content; animation: marquee 20s linear infinite; align-items: center;">
+            <style>
+                @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+                .mq-item { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 0.9rem; color: #ffffff; white-space: nowrap; font-family: 'Poppins', sans-serif; }
+                .mq-dot { width: 5px; height: 5px; background: #ffffff; border-radius: 50%; opacity: 0.8; }
+            </style>
+            <!-- Items -->
+            <span class="mq-item"><span class="mq-dot"></span>NIST Data Destruction</span>
+            <span class="mq-item"><span class="mq-dot"></span>12,500 Tons Processed</span>
+            <span class="mq-item"><span class="mq-dot"></span>Circular Economy</span>
+            <span class="mq-item"><span class="mq-dot"></span>Carbon Neutral Operations</span>
+            <span class="mq-item"><span class="mq-dot"></span>98,000 Devices Recycled</span>
+            <span class="mq-item"><span class="mq-dot"></span>MPCB Authorized</span>
+            <span class="mq-item"><span class="mq-dot"></span>Zero Landfill Policy</span>
+            <span class="mq-item"><span class="mq-dot"></span>500+ Corporate Clients</span>
+            
+            <!-- Duplicated for infinite scroll -->
+            <span class="mq-item"><span class="mq-dot"></span>NIST Data Destruction</span>
+            <span class="mq-item"><span class="mq-dot"></span>12,500 Tons Processed</span>
+            <span class="mq-item"><span class="mq-dot"></span>Circular Economy</span>
+            <span class="mq-item"><span class="mq-dot"></span>Carbon Neutral Operations</span>
+            <span class="mq-item"><span class="mq-dot"></span>98,000 Devices Recycled</span>
+            <span class="mq-item"><span class="mq-dot"></span>MPCB Authorized</span>
+            <span class="mq-item"><span class="mq-dot"></span>Zero Landfill Policy</span>
+            <span class="mq-item"><span class="mq-dot"></span>500+ Corporate Clients</span>
         </div>
     </div>
 
@@ -190,46 +202,228 @@
         </div>
     </section>
 
-    <!-- Types of E-Waste Section -->
-    <section class="section" style="padding-top: 6rem;">
-        <div class="container">
-            <div class="section-header text-center">
-                <div style="display: inline-flex; flex-direction: column; align-items: flex-start;">
-                    <div class="badge" style="margin: 0 0 0.25rem 0;">Comprehensive Processing</div>
-                    <h2 class="section-title" style="margin-top: 0;">What We Recycle</h2>
+    <!-- Types of E-Waste Section exactly matching screenshot -->
+    <section style="padding: 5rem 1rem; background: #fafcfa; font-family: 'Poppins', sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Header layout -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; margin-bottom: 3rem;">
+                <div>
+                    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(18,180,136,0.1); color: var(--primary); padding: 6px 14px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 1rem; text-transform: uppercase;">
+                        <span style="width: 5px; height: 5px; background: var(--primary); border-radius: 50%;"></span> WHAT WE RECOVER
+                    </div>
+                    <h2 style="font-size: 3.2rem; font-weight: 900; color: #151616; margin: 0; line-height: 1.1;">
+                        Waste <span style="color: var(--primary);">Materials</span>
+                    </h2>
                 </div>
-                <p class="section-subtitle">We manage and recover materials from every major category of electronic and electrical waste.</p>
+                <p style="max-width: 420px; color: #5a6b5a; font-size: 0.95rem; font-weight: 500; margin: 0; line-height: 1.6;">
+                    Certified, end-to-end processing across every category of electronic and industrial waste — engineered for enterprise IT asset disposition.
+                </p>
             </div>
             
-            <div class="waste-grid">
-                <a href="waste-it.html" class="waste-card" style="display:block;">
-                    <img src="assets/images/waste-it.jpg" alt="IT and Telecom Waste" class="waste-img">
-                    <div class="waste-overlay">
-                        <h3>IT & Telecommunication</h3>
-                        <p>Servers, laptops, smartphones, routers, and networking equipment.</p>
+            <!-- Grid layout -->
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: transform 0.3s, box-shadow 0.3s; cursor: default;">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-cpu"></i>
                     </div>
-                </a>
-                <a href="waste-consumer.html" class="waste-card" style="display:block;">
-                    <img src="assets/images/waste-consumer.jpg" alt="Consumer Electronics" class="waste-img">
-                    <div class="waste-overlay">
-                        <h3>Consumer Electronics</h3>
-                        <p>Televisions, audio systems, smart home devices, and displays.</p>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Circuits</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">PCBs & components</p>
                     </div>
-                </a>
-                <a href="waste-battery.html" class="waste-card" style="display:block;">
-                    <img src="assets/images/waste-battery.jpg" alt="Batteries and Components" class="waste-img">
-                    <div class="waste-overlay">
-                        <h3>Batteries & PCBs</h3>
-                        <p>Lithium-ion batteries, printed circuit boards, and internal components.</p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-monitor"></i>
                     </div>
-                </a>
-                <a href="waste-lighting.html" class="waste-card" style="display:block;">
-                    <img src="assets/images/waste-lighting.jpg" alt="Lighting Equipment" class="waste-img">
-                    <div class="waste-overlay">
-                        <h3>Lighting Equipment</h3>
-                        <p>LED lamps, fluorescent tubes, and industrial lighting fixtures.</p>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Monitors</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">LCD, LED & CRT</p>
                     </div>
-                </a>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-device-mobile"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Mobiles</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">Smartphones & tablets</p>
+                    </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-printer"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Printers</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">Inkjet & laser units</p>
+                    </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-desktop"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Computers</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">Desktops & laptops</p>
+                    </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-hard-drives"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Servers</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">Data center hardware</p>
+                    </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Lights & Bulbs</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">CFL, LED & tube lights</p>
+                    </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-battery-full"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Batteries</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">Li-ion & UPS cells</p>
+                    </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-plug"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Cables</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">Wiring & connectors</p>
+                    </div>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #f2f2f2; border-radius: 16px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; min-width: 220px; flex: 1 1 calc(20% - 1rem); box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(18,180,136,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0;">
+                        <i class="ph-fill ph-factory"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #151616; margin: 0;">Steel</h4>
+                        <p style="font-size: 0.75rem; color: #888888; margin: 0; font-weight: 500;">Racks & metal scrap</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom feature bar matching screenshot -->
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 3rem; margin-top: 3.5rem;">
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: #5a6b5a;">
+                    <i class="ph-fill ph-shield-check" style="color: var(--primary); font-size: 1.1rem;"></i> NIST-Compliant Data Destruction
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: #5a6b5a;">
+                    <i class="ph-fill ph-certificate" style="color: var(--primary); font-size: 1.1rem;"></i> MPCB Authorized Processing
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: #5a6b5a;">
+                    <i class="ph-fill ph-leaf" style="color: var(--primary); font-size: 1.1rem;"></i> Zero Landfill Guarantee
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: #5a6b5a;">
+                    <i class="ph-fill ph-file-text" style="color: var(--primary); font-size: 1.1rem;"></i> Certificate of Destruction
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Recycling Workflow Section (Matches Screenshot style, custom content) -->
+    <section style="padding: 6rem 1rem; background: #ffffff; font-family: 'Poppins', sans-serif;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <!-- Header layout -->
+            <div style="text-center" style="text-align: center; margin-bottom: 5rem;">
+                <div style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: rgba(18,180,136,0.1); color: var(--primary); padding: 6px 14px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 1rem; text-transform: uppercase;">
+                    SIMPLE & SECURE
+                </div>
+                <h2 style="font-size: 3.2rem; font-weight: 900; color: #151616; margin: 0 0 1rem 0; line-height: 1.1;">
+                    Our Recycling <span style="color: var(--primary);">Workflow</span>
+                </h2>
+                <p style="color: #5a6b5a; font-size: 0.95rem; font-weight: 500; margin: 0 auto; max-width: 500px; line-height: 1.6;">
+                    An efficient, transparent 7-step process from collection to complete resource recovery.
+                </p>
+            </div>
+            
+            <!-- 7 Step Timeline layout -->
+            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 4rem;">
+                <!-- Step 1 -->
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; min-width: 100px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(18,180,136,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #151616; margin-bottom: 0.8rem; background: #ffffff;">
+                        <i class="ph-fill ph-calendar-check"></i>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #5a6b5a;">Schedule Pickup</span>
+                </div>
+                <!-- Step 2 -->
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; min-width: 100px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(18,180,136,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #151616; margin-bottom: 0.8rem; background: #ffffff;">
+                        <i class="ph-fill ph-truck"></i>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #5a6b5a;">Logistics</span>
+                </div>
+                <!-- Step 3 -->
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; min-width: 100px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(18,180,136,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #151616; margin-bottom: 0.8rem; background: #ffffff;">
+                        <i class="ph-fill ph-lock-key"></i>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #5a6b5a;">Data Security</span>
+                </div>
+                <!-- Step 4 -->
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; min-width: 100px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(18,180,136,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #151616; margin-bottom: 0.8rem; background: #ffffff;">
+                        <i class="ph-fill ph-stack"></i>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #5a6b5a;">Segregation</span>
+                </div>
+                <!-- Step 5 -->
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; min-width: 100px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(18,180,136,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #151616; margin-bottom: 0.8rem; background: #ffffff;">
+                        <i class="ph-fill ph-wrench"></i>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #5a6b5a;">Processing</span>
+                </div>
+                <!-- Step 6 -->
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; min-width: 100px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(18,180,136,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #151616; margin-bottom: 0.8rem; background: #ffffff;">
+                        <i class="ph-fill ph-recycle"></i>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #5a6b5a;">Recycling</span>
+                </div>
+                <!-- Step 7 -->
+                <div style="display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; min-width: 100px;">
+                    <div style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid rgba(18,180,136,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: #151616; margin-bottom: 0.8rem; background: #ffffff;">
+                        <i class="ph-fill ph-leaf"></i>
+                    </div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #5a6b5a;">Value Recovery</span>
+                </div>
+            </div>
+            
+            <!-- 3 Image Cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <!-- Card 1 -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; height: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="assets/images/process-1.png" alt="Logistics & Transport" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem 1.5rem 1.5rem; background: linear-gradient(to top, rgba(21,22,22,0.9), transparent);">
+                        <h3 style="color: white; margin: 0; font-size: 1.1rem; font-weight: 700;">1. Logistics & Transport</h3>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; height: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="assets/images/process-2.png" alt="Segregation & Processing" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem 1.5rem 1.5rem; background: linear-gradient(to top, rgba(21,22,22,0.9), transparent);">
+                        <h3 style="color: white; margin: 0; font-size: 1.1rem; font-weight: 700;">2. Segregation & Processing</h3>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div style="position: relative; border-radius: 20px; overflow: hidden; height: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <img src="assets/images/process-3.png" alt="Material Recovery" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem 1.5rem 1.5rem; background: linear-gradient(to top, rgba(21,22,22,0.9), transparent);">
+                        <h3 style="color: white; margin: 0; font-size: 1.1rem; font-weight: 700;">3. Material Recovery</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

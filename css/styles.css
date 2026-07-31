@@ -1520,3 +1520,239 @@ img {
 .hero-btn-alt:hover {
     background: #f0f0f0;
 }
+
+/* ==========================================================================
+   Animated Marquee Section
+   ========================================================================== */
+.marquee-wrapper {
+    background: var(--primary);
+    color: white;
+    padding: 12px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+}
+
+.marquee-inner {
+    display: inline-flex;
+    gap: 4rem;
+    animation: marquee 25s linear infinite;
+}
+
+.marquee-inner:hover {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.marquee-dot {
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   Waste Materials Grid (Pill Style)
+   ========================================================================== */
+.waste-pill-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.waste-pill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.waste-pill {
+    background: var(--bg-white);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: var(--transition);
+    flex: 1 1 calc(20% - 1.5rem);
+    min-width: 220px;
+    cursor: pointer;
+}
+
+.waste-pill:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+.waste-pill i {
+    font-size: 2rem;
+    color: var(--primary);
+    background: rgba(18, 180, 136, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.waste-pill:hover i {
+    background: var(--primary);
+    color: white;
+}
+
+.waste-pill h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.1rem;
+    color: var(--secondary);
+    font-weight: 700;
+}
+
+.waste-pill p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Our Recycling Process Timeline
+   ========================================================================== */
+.process-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.process-timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+}
+
+.process-timeline::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 4rem;
+    right: 4rem;
+    height: 2px;
+    background: rgba(18, 180, 136, 0.2);
+    z-index: 1;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+    width: 100px;
+}
+
+.process-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-white);
+    border: 2px solid rgba(18, 180, 136, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--secondary);
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.process-step:hover .process-circle {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.1);
+}
+
+.process-step-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-muted);
+    line-height: 1.2;
+}
+
+.process-step:hover .process-step-title {
+    color: var(--primary);
+}
+
+.process-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.process-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.process-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.process-card:hover img {
+    transform: scale(1.08);
+}
+
+.process-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.7) 50%, transparent 100%);
+    color: white;
+    transition: var(--transition);
+}
+
+.process-card-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+    transform: translateY(10px);
+    transition: var(--transition);
+}
+
+.process-card:hover .process-card-overlay {
+    background: linear-gradient(to top, rgba(18,180,136,0.95) 0%, rgba(18,180,136,0.7) 50%, transparent 100%);
+}
+
+.process-card:hover .process-card-title {
+    transform: translateY(0);
+}
