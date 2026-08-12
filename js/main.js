@@ -84,33 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(statsContainer);
     }
 
-    // 4. Form Submission Handling
-    const pickupForm = document.getElementById('pickup-form');
-    if (pickupForm) {
-        pickupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Simulate form submission
-            const btn = pickupForm.querySelector('.btn-submit');
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="ph ph-spinner ph-spin"></i> Processing...';
-            btn.style.opacity = '0.8';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.innerHTML = '<i class="ph-fill ph-check-circle"></i> Request Received!';
-                btn.style.backgroundColor = '#12b488'; // primary color
-                pickupForm.reset();
-                
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.backgroundColor = ''; // reset to default
-                    btn.style.opacity = '1';
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-    }
 });
 
 
@@ -213,5 +186,64 @@ window.addEventListener('load', () => {
                 preloader.style.display = 'none';
             }, 500); // Matches the CSS transition time
         }, 800);
+    }
+});
+
+// Process Carousel Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('process-carousel-track');
+    const nextBtn = document.getElementById('process-next');
+    const prevBtn = document.getElementById('process-prev');
+    
+    if (track && nextBtn && prevBtn) {
+        let currentIndex = 0;
+        const totalCards = 6;
+        
+        const updateCarousel = () => {
+            let cardsPerView = 1;
+            
+            const maxIndex = Math.max(0, totalCards - cardsPerView);
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            
+            // Calculate percentage to translate. 
+            // Gap is 2rem. To perfectly snap we can use offsetWidth.
+            // But since cards are roughly flex 1, translation by 100% / cardsPerView * index works approximately if gap is handled.
+            // A more robust way is querying card width:
+            const card = track.querySelector('.carousel-card');
+            if (card) {
+                const cardWidth = card.offsetWidth;
+                const gap = 32; // 2rem = 32px
+                const slideAmount = (cardWidth + gap) * currentIndex;
+                track.style.transform = `translateX(-${slideAmount}px)`;
+            }
+            
+            // Update button states
+            prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+            prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+            
+            nextBtn.style.opacity = currentIndex === maxIndex ? '0.5' : '1';
+            nextBtn.style.pointerEvents = currentIndex === maxIndex ? 'none' : 'auto';
+        };
+        
+        nextBtn.addEventListener('click', () => {
+            let cardsPerView = 1;
+            
+            const maxIndex = Math.max(0, totalCards - cardsPerView);
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+        
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+        
+        window.addEventListener('resize', updateCarousel);
+        // Initialize
+        setTimeout(updateCarousel, 100);
     }
 });
